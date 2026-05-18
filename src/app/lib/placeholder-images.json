@@ -1,0 +1,53 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-dog",
+      "description": "Happy dog playing with a smart interactive ball",
+      "imageUrl": "https://picsum.photos/seed/paw-hero/800/600",
+      "imageHint": "dog smart toy"
+    },
+    {
+      "id": "cat-fountain",
+      "description": "Elegant cat drinking from a ceramic smart water fountain",
+      "imageUrl": "https://picsum.photos/seed/cat-water/600/600",
+      "imageHint": "cat fountain"
+    },
+    {
+      "id": "smart-ball",
+      "description": "Interactive glowing ball for dogs",
+      "imageUrl": "https://picsum.photos/seed/smart-ball/600/600",
+      "imageHint": "smart ball"
+    },
+    {
+      "id": "automatic-feeder",
+      "description": "Modern automatic pet feeder with sleek design",
+      "imageUrl": "https://picsum.photos/seed/feeder/600/600",
+      "imageHint": "automatic feeder"
+    },
+    {
+      "id": "interactive-toy",
+      "description": "Challenging puzzle toy for pets",
+      "imageUrl": "https://picsum.photos/seed/puzzle-toy/600/600",
+      "imageHint": "pet puzzle"
+    },
+    {
+      "id": "walking-gadget",
+      "description": "Ergonomic smart leash with LED lights",
+      "imageUrl": "https://picsum.photos/seed/smart-leash/600/600",
+      "imageHint": "dog leash"
+    },
+    {
+      "id": "orthopedic-bed",
+      "description": "Minimalist orthopedic bed for dogs",
+      "imageUrl": "https://picsum.photos/seed/pet-bed/600/600",
+      "imageHint": "pet bed"
+    },
+    {
+      "id": "cat-scratcher",
+      "description": "Modern design vertical cat scratcher",
+      "imageUrl": "https://picsum.photos/seed/scratcher/600/600",
+      "imageHint": "cat scratcher"
+    }
+  ]
+}
