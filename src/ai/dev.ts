@@ -1,5 +1,5 @@
+
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/personalized-product-recommendations.ts';
-import '@/ai/flows/pet-gift-finder.ts';
+// MUTEA flows will be registered here

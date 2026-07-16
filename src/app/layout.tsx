@@ -1,10 +1,13 @@
 
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
 
+const inter = Inter({ subsets: ['latin'] });
+
 export const metadata: Metadata = {
-  title: 'PawSense | Juguetes y gadgets para mascotas felices',
-  description: 'Tienda premium de juguetes, gadgets y accesorios inteligentes para perros y gatos.',
+  title: 'MUTEA | Próximamente',
+  description: 'Descubre la nueva experiencia de MUTEA.',
 };
 
 export default function RootLayout({
@@ -14,12 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-body antialiased bg-background selection:bg-accent/30">
+      <body className={`${inter.className} antialiased selection:bg-primary/10`}>
         {children}
       </body>
     </html>
