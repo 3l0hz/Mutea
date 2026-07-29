@@ -1,0 +1,45 @@
+
+{
+  "entities": {
+    "Order": {
+      "title": "Order",
+      "description": "Reservas y pedidos del dispositivo MUTEA",
+      "type": "object",
+      "properties": {
+        "customerEmail": {
+          "type": "string",
+          "format": "email",
+          "description": "Email del cliente"
+        },
+        "variant": {
+          "type": "string",
+          "enum": ["Negro", "Blanco/Beige"],
+          "description": "Color del dispositivo seleccionado"
+        },
+        "includeUpsell": {
+          "type": "boolean",
+          "description": "Si incluye el pack de batería externa"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "confirmed"],
+          "description": "Estado del pedido"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["customerEmail", "variant"]
+    }
+  },
+  "auth": {
+    "providers": ["google"]
+  },
+  "firestore": {
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Colección de pedidos de MUTEA"
+    }
+  }
+}

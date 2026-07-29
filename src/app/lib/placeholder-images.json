@@ -1,4 +1,29 @@
 
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "mutea-product-black",
+      "description": "Dispositivo MUTEA negro con 3 antenas y glow azul",
+      "imageUrl": "https://picsum.photos/seed/mutea1/800/800",
+      "imageHint": "minimalist hardware device antennas blue glow"
+    },
+    {
+      "id": "mutea-product-white",
+      "description": "Dispositivo MUTEA blanco con 3 antenas",
+      "imageUrl": "https://picsum.photos/seed/mutea2/800/800",
+      "imageHint": "white hardware module antennas"
+    },
+    {
+      "id": "hero-context",
+      "description": "Persona durmiendo en paz en entorno urbano",
+      "imageUrl": "https://picsum.photos/seed/mutea-sleep/1920/1080",
+      "imageHint": "cinematic photography peaceful sleep"
+    },
+    {
+      "id": "usage-beach",
+      "description": "Contexto de playa con MUTEA",
+      "imageUrl": "https://picsum.photos/seed/mutea-beach/600/400",
+      "imageHint": "luxury beach relaxation"
+    }
+  ]
 }

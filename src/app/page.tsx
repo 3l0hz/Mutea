@@ -1,15 +1,22 @@
 
+import { Header } from '@/components/mutea/Header';
+import { Hero } from '@/components/mutea/Hero';
+import { Benefits } from '@/components/mutea/Benefits';
+import { UseCases } from '@/components/mutea/UseCases';
+import { ProductOffer } from '@/components/mutea/ProductOffer';
+import { Usage } from '@/components/mutea/Usage';
+import { Footer } from '@/components/mutea/Footer';
+
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">
-          MUTEA
-        </h1>
-        <p className="text-muted-foreground text-lg">
-          Próximamente
-        </p>
-      </div>
+    <main className="min-h-screen bg-background selection:bg-primary/30">
+      <Header />
+      <Hero />
+      <Benefits />
+      <UseCases />
+      <ProductOffer />
+      <Usage />
+      <Footer />
     </main>
   );
 }
