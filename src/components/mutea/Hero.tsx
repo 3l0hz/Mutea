@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -8,7 +7,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-context');
-  const productImg = PlaceHolderImages.find(img => img.id === 'mutea-product-black');
+  const productImageUrl = "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea/signal-2026-07-29-13-00-30-661_004.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYS9zaWduYWwtMjAyNi0wNy0yOS0xMy0wMC0zMC02NjFfMDA0LnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODUzNjQxNDEsImV4cCI6MTgxNjkwMDE0MX0.nPOhL26lQWxP8V65zGA0_yUb5zAREV87_cYypFl4dqY";
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
@@ -42,15 +41,18 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative aspect-square md:scale-110 flex items-center justify-center">
+        <div className="relative flex items-center justify-center">
           <div className="absolute w-[80%] h-[80%] bg-primary/10 rounded-full blur-[120px]" />
-          <Image
-            src={productImg?.imageUrl || ''}
-            alt="MUTEA Device"
-            width={600}
-            height={600}
-            className="relative z-10 drop-shadow-2xl grayscale-[0.2]"
-          />
+          <div className="relative z-10 max-w-lg w-full">
+            <Image
+              src={productImageUrl}
+              alt="MUTEA Device"
+              width={800}
+              height={800}
+              unoptimized
+              className="w-full h-auto drop-shadow-2xl rounded-2xl"
+            />
+          </div>
         </div>
       </div>
     </section>
