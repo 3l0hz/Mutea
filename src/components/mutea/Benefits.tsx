@@ -12,15 +12,15 @@ export function Benefits() {
   ];
 
   return (
-    <section id="beneficios" className="py-32 border-b border-white/5 bg-background">
+    <section id="beneficios" className="py-32 border-b border-slate-100 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {benefits.map((b, idx) => (
-            <div key={idx} className="flex flex-col items-center text-center space-y-6 group">
-              <div className="w-16 h-16 flex items-center justify-center border border-primary/30 rounded-full group-hover:bg-primary transition-all duration-500">
-                <b.icon className="w-8 h-8 text-primary group-hover:text-white transition-colors" />
+            <div key={idx} className="flex flex-col items-center text-center space-y-8 group">
+              <div className="w-20 h-20 flex items-center justify-center border-2 border-slate-100 rounded-full group-hover:border-primary group-hover:bg-primary transition-all duration-500">
+                <b.icon className="w-10 h-10 text-foreground group-hover:text-white transition-colors" />
               </div>
-              <h3 className="text-2xl font-bold tracking-widest uppercase italic">{b.title}</h3>
+              <h3 className="text-lg font-display font-black tracking-wider uppercase">{b.title}</h3>
             </div>
           ))}
         </div>

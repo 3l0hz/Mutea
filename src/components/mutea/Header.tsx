@@ -17,18 +17,18 @@ export function Header() {
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 py-6",
-      isScrolled ? "bg-background/80 backdrop-blur-md py-4 shadow-xl" : "bg-transparent"
+      isScrolled ? "bg-white/80 backdrop-blur-md py-4 shadow-sm" : "bg-transparent"
     )}>
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <MuteaLogo className="w-8 h-8 text-primary" />
-          <span className="text-xl font-bold tracking-[0.3em] text-foreground">MUTEA</span>
+          <span className="text-xl font-display font-black tracking-[0.3em] text-foreground">MUTEA</span>
         </div>
 
         <div className="hidden md:flex items-center gap-10">
-          <a href="#beneficios" className="text-sm font-medium tracking-widest text-foreground/70 hover:text-primary transition-colors uppercase">Beneficios</a>
-          <a href="#casos" className="text-sm font-medium tracking-widest text-foreground/70 hover:text-primary transition-colors uppercase">Casos de Uso</a>
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white rounded-none px-8 font-bold tracking-widest uppercase">
+          <a href="#beneficios" className="text-[10px] font-display font-bold tracking-widest text-foreground/60 hover:text-primary transition-colors uppercase">Beneficios</a>
+          <a href="#casos" className="text-[10px] font-display font-bold tracking-widest text-foreground/60 hover:text-primary transition-colors uppercase">Casos de Uso</a>
+          <Button variant="default" className="bg-foreground text-background hover:bg-foreground/90 rounded-none px-8 font-display font-bold tracking-widest uppercase text-[10px]">
             Comprar
           </Button>
         </div>

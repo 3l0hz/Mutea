@@ -5,15 +5,15 @@ import React from 'react';
 
 export function Usage() {
   return (
-    <section className="py-40 bg-background text-center px-6">
+    <section className="py-40 bg-white text-center px-6">
       <div className="max-w-3xl mx-auto space-y-12">
-        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter italic italic">
+        <h2 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tight">
           Así de <span className="text-primary">Simple.</span>
         </h2>
-        <div className="h-px w-20 bg-primary mx-auto" />
-        <p className="text-2xl md:text-3xl font-light text-foreground/80 leading-relaxed">
+        <div className="h-1 w-20 bg-foreground mx-auto" />
+        <p className="text-2xl md:text-3xl font-medium text-foreground/60 leading-relaxed max-w-2xl mx-auto">
           Conéctalo a un powerbank. Activa el switch. <br />
-          Recupera el <span className="font-bold italic">silencio</span> al instante.
+          Recupera el <span className="text-foreground font-black italic">silencio</span> al instante.
         </p>
       </div>
     </section>
