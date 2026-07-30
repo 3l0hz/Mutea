@@ -14,9 +14,9 @@ export function Footer() {
           <Image 
             src={LOGO_OFFICIAL_URL}
             alt="MUTEA Logo"
-            width={180}
-            height={40}
-            className="h-12 w-auto object-contain mx-auto md:mx-0"
+            width={400}
+            height={100}
+            className="h-14 md:h-20 w-auto object-contain mx-auto md:mx-0"
             unoptimized
           />
           <p className="text-[10px] font-display font-bold tracking-[0.3em] text-foreground/40 uppercase">Tranquilidad en cualquier lugar.</p>
