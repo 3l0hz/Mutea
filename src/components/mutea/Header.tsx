@@ -20,7 +20,7 @@ export function Header() {
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6",
-      isScrolled ? "bg-white/90 backdrop-blur-md py-4 shadow-sm" : "bg-transparent py-6"
+      isScrolled ? "bg-white/90 backdrop-blur-md py-2 shadow-sm" : "bg-transparent py-3"
     )}>
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
@@ -29,7 +29,7 @@ export function Header() {
             alt="MUTEA Logo"
             width={400}
             height={100}
-            className="h-12 md:h-16 lg:h-20 w-auto object-contain transition-all duration-300"
+            className="h-16 md:h-20 w-auto object-contain transition-all duration-300"
             unoptimized
           />
         </div>
