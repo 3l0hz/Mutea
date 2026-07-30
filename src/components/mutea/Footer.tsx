@@ -2,17 +2,23 @@
 "use client";
 
 import React from 'react';
-import { MuteaLogo } from './Header';
+import Image from 'next/image';
+
+const LOGO_OFFICIAL_URL = "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/Mutea%20Logo/mutea%20png.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9NdXRlYSBMb2dvL211dGVhIHBuZy5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg1NDM3NTU1LCJleHAiOjE4MTY5NzM1NTV9.JionC7C3f8CyKblQ7G-B45SgzPcn-YQWTqs4DltRqXg";
 
 export function Footer() {
   return (
     <footer className="py-24 bg-white border-t border-slate-100 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-16">
         <div className="space-y-6 text-center md:text-left">
-          <div className="flex items-center justify-center md:justify-start gap-4">
-            <MuteaLogo className="w-12 h-12 text-primary" />
-            <span className="text-3xl font-display font-black tracking-[0.5em] uppercase">MUTEA</span>
-          </div>
+          <Image 
+            src={LOGO_OFFICIAL_URL}
+            alt="MUTEA Logo"
+            width={180}
+            height={40}
+            className="h-12 w-auto object-contain mx-auto md:mx-0"
+            unoptimized
+          />
           <p className="text-[10px] font-display font-bold tracking-[0.3em] text-foreground/40 uppercase">Tranquilidad en cualquier lugar.</p>
         </div>
 
