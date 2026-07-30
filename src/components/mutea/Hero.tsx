@@ -10,7 +10,7 @@ export function Hero() {
   const productImageUrl = "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea/signal-2026-07-29-13-00-30-661_004.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYS9zaWduYWwtMjAyNi0wNy0yOS0xMy0wMC0zMC02NjFfMDA0LnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODUzNjQxNDEsImV4cCI6MTgxNjkwMDE0MX0.nPOhL26lQWxP8V65zGA0_yUb5zAREV87_cYypFl4dqY";
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
+    <section className="relative min-h-screen flex items-center pt-32 md:pt-40 overflow-hidden bg-white">
       {/* Background Image with Light Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -19,6 +19,7 @@ export function Hero() {
           fill
           className="object-cover opacity-10 grayscale"
           priority
+          unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
       </div>

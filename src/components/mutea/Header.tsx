@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -19,10 +18,10 @@ export function Header() {
 
   return (
     <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6",
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 flex items-center",
       isScrolled ? "bg-white/90 backdrop-blur-md py-4 shadow-sm min-h-[100px]" : "bg-transparent py-6 min-h-[112px]"
     )}>
-      <nav className="max-w-7xl mx-auto flex items-center justify-between h-full">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between w-full h-full">
         <div className="flex items-center">
           <Image 
             src={LOGO_OFFICIAL_URL}
