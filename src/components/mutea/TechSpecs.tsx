@@ -2,7 +2,7 @@
 "use client";
 
 import React from 'react';
-import { Radio, Cpu, Signal, Settings2, Box, ShieldCheck } from 'lucide-react';
+import { Radio, Box, Signal, Settings2, Laptop, ShieldCheck } from 'lucide-react';
 
 export function TechSpecs() {
   const specs = [
@@ -13,10 +13,10 @@ export function TechSpecs() {
       icon: Radio
     },
     {
-      title: "Arquitectura",
-      value: "Alta calidad",
-      description: "Plataforma compacta y confiable que permite portabilidad y estabilidad total.",
-      icon: Cpu
+      title: "DISEÑO EXCLUSIVO",
+      value: "MODELADO 3D",
+      description: "Case diseñado y modelado a medida en 3D para una estructura compacta, ultra resistente y con ventilación optimizada.",
+      icon: Laptop
     },
     {
       title: "Antena 2.4GHz",
