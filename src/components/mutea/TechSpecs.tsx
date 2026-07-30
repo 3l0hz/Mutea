@@ -8,8 +8,8 @@ export function TechSpecs() {
   const specs = [
     {
       title: "Alcance extendido",
-      value: "15-20 metros",
-      description: "Afecta a parlantes en un radio de hasta 20 mts en línea de vista directa.",
+      value: "HASTA 35 METROS",
+      description: "Alcance extendido comprobado de hasta 35 metros. Capaz de atravesar muros de concreto sin perder eficacia con parlantes molestos.",
       icon: Radio
     },
     {
@@ -25,9 +25,9 @@ export function TechSpecs() {
       icon: Signal
     },
     {
-      title: "Configuración",
-      value: "Adaptable",
-      description: "Permite ajustar el comportamiento operativo según distintos escenarios.",
+      title: "USO INMEDIATO",
+      value: "PLUG & PLAY",
+      description: "Sin configuraciones complejas ni menús. Solo conéctalo y actívalo al instante con su switch de encendido.",
       icon: Settings2
     },
     {
