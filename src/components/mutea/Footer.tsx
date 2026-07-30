@@ -2,14 +2,16 @@
 "use client";
 
 import React from 'react';
+import { MuteaLogo } from './Header';
 
 export function Footer() {
   return (
     <footer className="py-24 bg-white border-t border-slate-100 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-16">
         <div className="space-y-6 text-center md:text-left">
-          <div className="flex items-center justify-center md:justify-start gap-3">
-            <span className="text-3xl font-display font-black tracking-[0.4em] uppercase">MUTEA</span>
+          <div className="flex items-center justify-center md:justify-start gap-4">
+            <MuteaLogo className="w-12 h-12 text-primary" />
+            <span className="text-3xl font-display font-black tracking-[0.5em] uppercase">MUTEA</span>
           </div>
           <p className="text-[10px] font-display font-bold tracking-[0.3em] text-foreground/40 uppercase">Tranquilidad en cualquier lugar.</p>
         </div>
