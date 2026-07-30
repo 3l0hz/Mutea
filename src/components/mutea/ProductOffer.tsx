@@ -4,27 +4,29 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export function ProductOffer() {
   const [variant, setVariant] = useState('Negro');
   const [includeUpsell, setIncludeUpsell] = useState(false);
-  const blackImg = PlaceHolderImages.find(img => img.id === 'mutea-product-black');
-  const whiteImg = PlaceHolderImages.find(img => img.id === 'mutea-product-white');
+
+  // URL oficial de Supabase para la sección de compra
+  const productOfferImageUrl = "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/Compra/signal-2026-07-29-13-00-30-661_003.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9Db21wcmEvc2lnbmFsLTIwMjYtMDctMjktMTMtMDAtMzAtNjYxXzAwMy5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg1NDMyODMzLCJleHAiOjE4MTY5Njg4MzN9.9uvhRwuwXfWigwg-O36v1BYjn2RGdeODaBGGKD-4MxQ";
 
   return (
     <section className="py-32 px-6 bg-white">
       <div className="max-w-6xl mx-auto border border-slate-200 rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200/50">
         <div className="grid md:grid-cols-2">
+          {/* Lado izquierdo con la imagen oficial */}
           <div className="p-12 md:p-20 relative bg-slate-50 flex items-center justify-center min-h-[500px]">
             <Image
-              src={variant === 'Negro' ? blackImg?.imageUrl || '' : whiteImg?.imageUrl || ''}
-              alt="Mutea product"
-              width={500}
-              height={500}
-              className="object-contain drop-shadow-2xl grayscale-[0.1]"
+              src={productOfferImageUrl}
+              alt="MUTEA Pro Device"
+              width={600}
+              height={600}
+              unoptimized
+              className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700"
             />
           </div>
 
@@ -60,12 +62,12 @@ export function ProductOffer() {
               <div 
                 onClick={() => setIncludeUpsell(!includeUpsell)}
                 className={cn(
-                  "p-6 border-2 cursor-pointer transition-all flex items-center justify-between",
+                  "p-6 border-2 cursor-pointer transition-all flex items-center justify-between group",
                   includeUpsell ? "border-primary bg-primary/5" : "border-slate-100 hover:border-slate-200"
                 )}
               >
                 <div className="flex items-center gap-4">
-                  <div className={cn("w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all", includeUpsell ? "bg-primary border-primary" : "border-slate-200")}>
+                  <div className={cn("w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all", includeUpsell ? "bg-primary border-primary" : "border-slate-200 group-hover:border-slate-300")}>
                     {includeUpsell && <Check className="w-4 h-4 text-white" />}
                   </div>
                   <div>
