@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { ReservationModal } from './ReservationModal';
 
 export function Hero() {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-context');
@@ -36,9 +37,13 @@ export function Hero() {
             Recupera tu tranquilidad cuando otros no respetan. Sin complicaciones, solo paz.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-foreground hover:bg-foreground/90 text-background rounded-none h-16 px-12 text-sm font-display font-bold tracking-[0.2em] uppercase">
-              Comprar ahora
-            </Button>
+            <ReservationModal 
+              trigger={
+                <Button className="bg-foreground hover:bg-foreground/90 text-background rounded-none h-16 px-12 text-sm font-display font-bold tracking-[0.2em] uppercase">
+                  Comprar ahora
+                </Button>
+              }
+            />
           </div>
         </div>
 

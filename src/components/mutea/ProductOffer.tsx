@@ -1,4 +1,3 @@
-
 "use client";
 
 import * as React from 'react';
@@ -7,6 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { ReservationModal } from './ReservationModal';
 
 const GALLERIES = {
   'Blanco': [
@@ -19,7 +19,7 @@ const GALLERIES = {
     "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20black/Costado%20atras.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSBibGFjay9Db3N0YWRvIGF0cmFzLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODU0MzY0MTMsImV4cCI6MTgxNjk3MjQxM30.lreJtTnoy26UMFj2MrgO39GGNqjtM4DTNczpdNXE4q0",
     "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20black/Costado%20adelante.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSBibGFjay9Db3N0YWRvIGFkZWxhbnRlLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODU0MzY0MjEsImV4cCI6MTgxNjk3MjQyMX0.PhjyXcNIGnpBt2DYo_EcWt_RYTwuup0OVltElYLnlho",
     "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20black/frente.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSBibGFjay9mcmVudGUucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NTQzNzE4OSwiZXhwIjoxODE2OTczMTg5fQ.QI9IsRLABdorR0lfhOWkf9kyiCzbBx9fo4kXP0YcCXQ",
-    "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20black/atras.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSBibGFjay9hdHJhcy5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg1NDM2NDM4LCJleHAiOjE4MTY5NzI0Mzh9.xRsXOL0vBqVV0LnPUqQIhstgthV70CreQq7xHhzkYhs"
+    "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20black/atras.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSBibGFjay9hdHJhcy5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg1NDM3MDgzLCJleHAiOjE4MTY5NzMwODN9.a4UGP0d9si6EKLHK8nz_B4NmJ-dcqcIT12dES4Oy3o8"
   ]
 };
 
@@ -123,9 +123,15 @@ export function ProductOffer() {
               </div>
             </div>
 
-            <Button className="w-full h-24 bg-foreground hover:bg-foreground/90 text-background rounded-none text-xl font-display font-black uppercase tracking-[0.3em] shadow-xl shadow-foreground/20">
-              Reservar ahora
-            </Button>
+            <ReservationModal 
+              initialVariant={variant}
+              initialUpsell={includeUpsell}
+              trigger={
+                <Button className="w-full h-24 bg-foreground hover:bg-foreground/90 text-background rounded-none text-xl font-display font-black uppercase tracking-[0.3em] shadow-xl shadow-foreground/20">
+                  Reservar ahora
+                </Button>
+              }
+            />
             
             <p className="text-center text-[10px] font-display font-bold text-foreground/30 uppercase tracking-[0.2em]">
               Sin contratos. Sin configuraciones. Solo paz.
