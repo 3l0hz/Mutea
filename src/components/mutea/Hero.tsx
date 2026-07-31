@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -5,6 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ReservationModal } from './ReservationModal';
+import Radar from './Radar';
 
 export function Hero() {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-context');
@@ -23,6 +25,18 @@ export function Hero() {
           unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
+      </div>
+
+      {/* Radar Animation Layer */}
+      <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden flex items-center justify-center opacity-40">
+        <Radar 
+          color="#29b8ff" 
+          backgroundColor="#ffffff" 
+          scale={0.7} 
+          sweepSpeed={0.8}
+          brightness={1.2}
+          falloff={1.8}
+        />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
