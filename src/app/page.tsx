@@ -7,6 +7,7 @@ import { UseCases } from '@/components/mutea/UseCases';
 import { ProductOffer } from '@/components/mutea/ProductOffer';
 import { Usage } from '@/components/mutea/Usage';
 import { Footer } from '@/components/mutea/Footer';
+import { WhatsAppButton } from '@/components/mutea/WhatsAppButton';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <ProductOffer />
       <Usage />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }
