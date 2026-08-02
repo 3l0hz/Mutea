@@ -31,7 +31,7 @@ import { MessageCircle } from 'lucide-react';
 const formSchema = z.object({
   fullName: z.string().min(2, "El nombre es obligatorio"),
   phone: z.string().min(8, "El teléfono es obligatorio"),
-  city: z.string().min(2, "La ciudad es obligatoria"),
+  city: z.string().min(2, "La región y comuna son obligatorias"),
   address: z.string().min(5, "La dirección de envío es obligatoria"),
   variant: z.enum(["Blanco", "Negro"]),
   includeUpsell: z.boolean(),
@@ -79,7 +79,7 @@ export function ReservationModal({
     const fullText = `Hola! Me gustaría confirmar mi pedido de MUTEA:
 👤 Nombre: ${values.fullName}
 📞 Teléfono: ${values.phone}
-📍 Ubicación: ${values.city}
+📍 Región y Comuna: ${values.city}
 🏠 Dirección: ${values.address}
 🎨 Color: ${values.variant}
 ⚡ Pack Energía: ${packText}
@@ -138,9 +138,9 @@ export function ReservationModal({
                   name="city"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-[10px] font-display font-black uppercase tracking-widest text-foreground/40">Ciudad / Región</FormLabel>
+                      <FormLabel className="text-[10px] font-display font-black uppercase tracking-widest text-foreground/40">Región y Comuna</FormLabel>
                       <FormControl>
-                        <Input placeholder="Ej: Santiago, RM" className="h-12 rounded-none bg-slate-50 border-slate-200 focus:border-primary transition-all" {...field} />
+                        <Input placeholder="Ej: Región Metropolitana, Las Condes o Ej: Valparaíso, Viña del Mar" className="h-12 rounded-none bg-slate-50 border-slate-200 focus:border-primary transition-all" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -15,7 +16,7 @@ const formSchema = z.object({
     message: "El nombre debe tener al menos 2 caracteres.",
   }),
   city: z.string().min(2, {
-    message: "La ciudad o región es obligatoria.",
+    message: "La región y comuna son obligatorias.",
   }),
   message: z.string().optional(),
 });
@@ -32,7 +33,7 @@ export function ContactForm() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     const phoneNumber = "56940628182";
-    const baseText = `Hola! Mi nombre es ${values.fullName}, soy de ${values.city}. Me gustaría obtener información sobre MUTEA.`;
+    const baseText = `Hola! Mi nombre es ${values.fullName}, soy de la región y comuna: ${values.city}. Me gustaría obtener información sobre MUTEA.`;
     const messagePart = values.message ? ` Consulta: ${values.message}` : "";
     const fullText = encodeURIComponent(baseText + messagePart);
     
@@ -72,9 +73,9 @@ export function ContactForm() {
                   name="city"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-[10px] font-display font-black uppercase tracking-widest text-foreground/40">Ciudad / Región</FormLabel>
+                      <FormLabel className="text-[10px] font-display font-black uppercase tracking-widest text-foreground/40">Región y Comuna</FormLabel>
                       <FormControl>
-                        <Input placeholder="Ej: Santiago, RM" className="h-14 rounded-none border-slate-200 focus:border-primary transition-all bg-slate-50/50" {...field} />
+                        <Input placeholder="Ej: Región Metropolitana, Las Condes o Ej: Valparaíso, Viña del Mar" className="h-14 rounded-none border-slate-200 focus:border-primary transition-all bg-slate-50/50" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
