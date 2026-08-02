@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from 'react';
@@ -77,7 +78,7 @@ export function ProductOffer() {
           <div className="p-12 md:p-20 flex flex-col justify-center space-y-10">
             <div>
               <span className="text-primary font-display font-black tracking-[0.3em] uppercase text-[10px]">Edición Limitada</span>
-              <h2 className="text-5xl font-display font-black uppercase tracking-tight mt-2">MUTEA Pro</h2>
+              <h2 className="text-5xl font-display font-black uppercase tracking-tight mt-2">MUTEA</h2>
               <div className="flex items-baseline gap-4 mt-8">
                 <span className="text-6xl font-display font-black tracking-tighter">$79.990</span>
                 <span className="text-foreground font-display font-bold uppercase text-[9px] px-3 py-1 bg-slate-100 rounded-full">Oferta Lanzamiento</span>
