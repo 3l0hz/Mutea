@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -14,14 +13,14 @@ export function UseCases() {
   ];
 
   return (
-    <section id="casos" className="py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-12 md:gap-24">
+    <section id="casos" className="py-16 md:py-24 bg-slate-50 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-wrap justify-center gap-8 md:gap-24">
         {cases.map((c, idx) => (
-          <div key={idx} className="flex flex-col items-center gap-4 opacity-40 hover:opacity-100 transition-all hover:scale-110 cursor-default">
-            <div className="p-4 bg-white rounded-2xl shadow-sm">
-              <c.icon className="w-8 h-8 text-foreground" />
+          <div key={idx} className="flex flex-col items-center gap-4 opacity-60 md:opacity-40 hover:opacity-100 transition-all hover:scale-110 cursor-default">
+            <div className="p-5 md:p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+              <c.icon className="w-10 h-10 md:w-8 md:h-8 text-foreground" />
             </div>
-            <span className="text-[10px] font-display font-black tracking-[0.2em] uppercase text-foreground">{c.label}</span>
+            <span className="text-[10px] md:text-[10px] font-display font-black tracking-[0.2em] uppercase text-foreground">{c.label}</span>
           </div>
         ))}
       </div>

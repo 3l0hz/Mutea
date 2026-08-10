@@ -19,28 +19,30 @@ export function Header() {
 
   return (
     <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 flex items-center",
-      isScrolled ? "bg-white/90 backdrop-blur-md py-4 shadow-sm min-h-[100px]" : "bg-transparent py-6 min-h-[112px]"
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-4 md:px-6 flex items-center",
+      isScrolled ? "bg-white/95 backdrop-blur-md py-2 shadow-sm min-h-[70px] md:min-h-[90px]" : "bg-transparent py-4 min-h-[80px] md:min-h-[112px]"
     )}>
       <nav className="max-w-7xl mx-auto flex items-center justify-between w-full h-full">
         <div className="flex items-center">
           <Image 
             src={LOGO_OFFICIAL_URL}
             alt="MUTEA Logo"
-            width={400}
-            height={100}
-            className="!h-20 md:!h-24 w-auto object-contain transition-all duration-300"
+            width={300}
+            height={75}
+            className="h-10 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300"
             unoptimized
           />
         </div>
 
-        <div className="hidden md:flex items-center gap-10">
-          <a href="#beneficios" className="text-[10px] font-display font-bold tracking-widest text-foreground/60 hover:text-primary transition-colors uppercase">Beneficios</a>
-          <a href="#casos" className="text-[10px] font-display font-bold tracking-widest text-foreground/60 hover:text-primary transition-colors uppercase">Casos de Uso</a>
+        <div className="flex items-center gap-4 md:gap-10">
+          <div className="hidden md:flex items-center gap-10">
+            <a href="#beneficios" className="text-[10px] font-display font-bold tracking-widest text-foreground/60 hover:text-primary transition-colors uppercase">Beneficios</a>
+            <a href="#casos" className="text-[10px] font-display font-bold tracking-widest text-foreground/60 hover:text-primary transition-colors uppercase">Casos de Uso</a>
+          </div>
           
           <ReservationModal 
             trigger={
-              <Button variant="default" className="bg-foreground text-background hover:bg-foreground/90 rounded-none px-8 font-display font-bold tracking-widest uppercase text-[10px]">
+              <Button variant="default" className="bg-foreground text-background hover:bg-foreground/90 rounded-none px-6 md:px-8 h-10 md:h-12 font-display font-bold tracking-widest uppercase text-[9px] md:text-[10px]">
                 Comprar
               </Button>
             }

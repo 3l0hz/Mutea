@@ -1,4 +1,3 @@
-
 "use client";
 
 import * as React from 'react';
@@ -36,11 +35,11 @@ export function ProductOffer() {
   const currentGallery = GALLERIES[variant];
 
   return (
-    <section className="py-32 px-6 bg-white">
-      <div className="max-w-6xl mx-auto border border-slate-200 rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200/50">
-        <div className="grid md:grid-cols-2">
+    <section className="py-16 md:py-32 px-4 md:px-6 bg-white">
+      <div className="max-w-6xl mx-auto border border-slate-200 rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200/50">
+        <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Lado izquierdo con Galería Dinámica */}
-          <div className="p-8 md:p-12 relative bg-slate-50 flex flex-col items-center justify-center min-h-[600px] gap-8">
+          <div className="p-6 md:p-12 relative bg-slate-50 flex flex-col items-center justify-center min-h-[400px] md:min-h-[600px] gap-6 md:gap-8">
             <div className="relative w-full aspect-square flex items-center justify-center">
               <Image
                 src={currentGallery[activeImageIndex]}
@@ -53,13 +52,13 @@ export function ProductOffer() {
             </div>
             
             {/* Thumbnails de la galería */}
-            <div className="grid grid-cols-4 gap-3 w-full max-w-sm">
+            <div className="grid grid-cols-4 gap-2 md:gap-3 w-full max-w-sm">
               {currentGallery.map((url, idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveImageIndex(idx)}
                   className={cn(
-                    "relative aspect-square rounded-xl overflow-hidden border-2 transition-all",
+                    "relative aspect-square rounded-lg md:rounded-xl overflow-hidden border-2 transition-all",
                     activeImageIndex === idx ? "border-primary scale-105 shadow-md" : "border-transparent opacity-60 hover:opacity-100"
                   )}
                 >
@@ -75,26 +74,26 @@ export function ProductOffer() {
             </div>
           </div>
 
-          <div className="p-12 md:p-20 flex flex-col justify-center space-y-10">
-            <div>
-              <span className="text-primary font-display font-black tracking-[0.3em] uppercase text-[10px]">Edición Limitada</span>
-              <h2 className="text-5xl font-display font-black uppercase tracking-tight mt-2">MUTEA</h2>
-              <div className="flex items-baseline gap-4 mt-8">
-                <span className="text-6xl font-display font-black tracking-tighter">$79.990</span>
-                <span className="text-foreground font-display font-bold uppercase text-[9px] px-3 py-1 bg-slate-100 rounded-full">Oferta Lanzamiento</span>
+          <div className="p-8 md:p-20 flex flex-col justify-center space-y-8 md:space-y-10">
+            <div className="text-center md:text-left">
+              <span className="text-primary font-display font-black tracking-[0.3em] uppercase text-[9px] md:text-[10px]">Edición Limitada</span>
+              <h2 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tight mt-2">MUTEA</h2>
+              <div className="flex items-baseline justify-center md:justify-start gap-4 mt-6 md:mt-8">
+                <span className="text-5xl md:text-6xl font-display font-black tracking-tighter">$79.990</span>
+                <span className="text-foreground font-display font-bold uppercase text-[8px] md:text-[9px] px-3 py-1 bg-slate-100 rounded-full">Oferta</span>
               </div>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               <div>
-                <p className="text-[10px] font-display font-black uppercase tracking-widest text-foreground/40 mb-4">Color del Case</p>
-                <div className="flex gap-4">
+                <p className="text-[9px] md:text-[10px] font-display font-black uppercase tracking-widest text-foreground/40 mb-3 md:mb-4 text-center md:text-left">Color del Case</p>
+                <div className="flex gap-3 md:gap-4">
                   {(['Blanco', 'Negro'] as const).map(v => (
                     <button
                       key={v}
                       onClick={() => setVariant(v)}
                       className={cn(
-                        "flex-1 py-4 border-2 font-display font-bold uppercase text-[10px] tracking-widest transition-all rounded-none",
+                        "flex-1 py-3 md:py-4 border-2 font-display font-bold uppercase text-[9px] md:text-[10px] tracking-widest transition-all rounded-none",
                         variant === v ? "border-foreground text-foreground bg-slate-50" : "border-slate-100 text-foreground/30 hover:border-slate-300"
                       )}
                     >
@@ -107,20 +106,20 @@ export function ProductOffer() {
               <div 
                 onClick={() => setIncludeUpsell(!includeUpsell)}
                 className={cn(
-                  "p-6 border-2 cursor-pointer transition-all flex items-center justify-between group rounded-none",
+                  "p-4 md:p-6 border-2 cursor-pointer transition-all flex items-center justify-between group rounded-none",
                   includeUpsell ? "border-primary bg-primary/5" : "border-slate-100 hover:border-slate-200"
                 )}
               >
-                <div className="flex items-center gap-4">
-                  <div className={cn("w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all", includeUpsell ? "bg-primary border-primary" : "border-slate-200 group-hover:border-slate-300")}>
-                    {includeUpsell && <Check className="w-4 h-4 text-white" />}
+                <div className="flex items-center gap-3 md:gap-4">
+                  <div className={cn("w-5 h-5 md:w-6 md:h-6 rounded-full border-2 flex items-center justify-center transition-all", includeUpsell ? "bg-primary border-primary" : "border-slate-200 group-hover:border-slate-300")}>
+                    {includeUpsell && <Check className="w-3 h-3 md:w-4 md:h-4 text-white" />}
                   </div>
                   <div>
-                    <p className="font-display font-black uppercase text-[10px] tracking-widest">+ Pack Energía</p>
-                    <p className="text-xs text-foreground/50 font-medium">Batería 20k mAh + Cable premium</p>
+                    <p className="font-display font-black uppercase text-[9px] md:text-[10px] tracking-widest">+ Pack Energía</p>
+                    <p className="text-[10px] md:text-xs text-foreground/50 font-medium line-clamp-1">Batería 20k mAh + Cable premium</p>
                   </div>
                 </div>
-                <span className="font-display font-black text-primary">+$10.000</span>
+                <span className="font-display font-black text-primary text-sm md:text-base">+$10.000</span>
               </div>
             </div>
 
@@ -128,13 +127,13 @@ export function ProductOffer() {
               initialVariant={variant}
               initialUpsell={includeUpsell}
               trigger={
-                <Button className="w-full h-24 bg-foreground hover:bg-foreground/90 text-background rounded-none text-xl font-display font-black uppercase tracking-[0.3em] shadow-xl shadow-foreground/20">
+                <Button className="w-full h-20 md:h-24 bg-foreground hover:bg-foreground/90 text-background rounded-none text-lg md:text-xl font-display font-black uppercase tracking-[0.2em] md:tracking-[0.3em] shadow-xl shadow-foreground/20">
                   Reservar ahora
                 </Button>
               }
             />
             
-            <p className="text-center text-[10px] font-display font-bold text-foreground/30 uppercase tracking-[0.2em]">
+            <p className="text-center text-[9px] md:text-[10px] font-display font-bold text-foreground/30 uppercase tracking-[0.2em]">
               Sin contratos. Sin configuraciones. Solo paz.
             </p>
           </div>
