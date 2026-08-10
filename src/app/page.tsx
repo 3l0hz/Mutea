@@ -11,21 +11,17 @@ import { Usage } from '@/components/mutea/Usage';
 import { Footer } from '@/components/mutea/Footer';
 import { WhatsAppButton } from '@/components/mutea/WhatsAppButton';
 import { MuteaVideoSection } from '@/components/mutea/MuteaVideoSection';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Home() {
   const VIDEO_URL = "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/Video%20HEro/Man_holding_Mutea_device_202608042127.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9WaWRlbyBIRXJvL01hbl9ob2xkaW5nX011dGVhX2RldmljZV8yMDI2MDgwNDIxMjcubXA0Iiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjM4MDM0NCwiZXhwIjo0OTM5OTgwMzQ0fQ.yupdkHlmYfi2q9WriONBrIutP-a6ElDBYN5CgMzVey0";
   
-  const videoPoster = PlaceHolderImages.find(img => img.id === 'mutea-video-poster');
-
   return (
     <main className="min-h-screen bg-background selection:bg-primary/30">
       <Header />
       <Hero />
       <MuteaVideoSection 
         videoUrl={VIDEO_URL} 
-        posterUrl={videoPoster?.imageUrl || "https://picsum.photos/seed/mutea-video/1280/720"}
-        startTime={0} // Ajustar si el video requiere un salto inicial de escena
+        startTime={0} 
       />
       <InfoSection />
       <TechSpecs />

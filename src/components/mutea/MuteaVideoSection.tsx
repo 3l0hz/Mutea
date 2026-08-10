@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 
 interface MuteaVideoSectionProps {
   videoUrl: string;
-  posterUrl: string;
+  posterUrl?: string;
   startTime?: number;
 }
 
@@ -37,7 +37,6 @@ export function MuteaVideoSection({
     }
   };
 
-  // Sincronizar estado si el usuario usa controles nativos
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -88,7 +87,6 @@ export function MuteaVideoSection({
               controls={isPlaying}
               preload="metadata"
               playsInline
-              poster={posterUrl}
             >
               <source src={videoUrl} type="video/mp4" />
               Tu navegador no soporta la reproducción de videos.
@@ -98,7 +96,7 @@ export function MuteaVideoSection({
             {!isPlaying && (
               <div 
                 className={cn(
-                  "absolute inset-0 z-10 flex items-center justify-center transition-all duration-500",
+                  "absolute inset-0 z-10 flex items-center justify-center transition-all duration-500 cursor-pointer",
                   isHovered ? "bg-black/5" : "bg-black/0"
                 )}
                 onClick={handleTogglePlay}

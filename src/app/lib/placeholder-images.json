@@ -24,12 +24,6 @@
       "description": "Contexto de playa con MUTEA",
       "imageUrl": "https://picsum.photos/seed/mutea-beach/600/400",
       "imageHint": "luxury beach relaxation"
-    },
-    {
-      "id": "mutea-video-poster",
-      "description": "Hombre sosteniendo el dispositivo Mutea",
-      "imageUrl": "https://picsum.photos/seed/mutea-man/1280/720",
-      "imageHint": "man holding high tech electronic device"
     }
   ]
 }
