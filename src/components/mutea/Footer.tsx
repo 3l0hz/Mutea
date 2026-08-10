@@ -12,30 +12,29 @@ export function Footer() {
   return (
     <footer className="bg-white pt-20 pb-12 px-6 border-t border-slate-100">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 items-start">
           
-          {/* Logo y Eslogan */}
-          <div className="md:col-span-4 space-y-6 text-center md:text-left">
-            <Link href="/" className="inline-block">
-              <Image 
-                src={LOGO_OFFICIAL_URL}
-                alt="MUTEA Logo"
-                width={240}
-                height={60}
-                className="h-12 md:h-16 w-auto object-contain mx-auto md:mx-0"
-                unoptimized
-              />
-            </Link>
-            <p className="text-[10px] font-display font-bold tracking-[0.3em] text-foreground/40 uppercase">
-              Tranquilidad en cualquier lugar.
-            </p>
-          </div>
+          {/* Columna 1: Marca y Redes Sociales */}
+          <div className="space-y-8 text-center md:text-left">
+            <div className="space-y-4">
+              <Link href="/" className="inline-block">
+                <Image 
+                  src={LOGO_OFFICIAL_URL}
+                  alt="MUTEA Logo"
+                  width={240}
+                  height={60}
+                  className="h-12 md:h-16 w-auto object-contain mx-auto md:mx-0"
+                  unoptimized
+                />
+              </Link>
+              <p className="text-[10px] font-display font-bold tracking-[0.3em] text-foreground/40 uppercase">
+                Tranquilidad en cualquier lugar.
+              </p>
+            </div>
 
-          {/* Redes Sociales Centrales */}
-          <div className="md:col-span-4 flex flex-col items-center justify-center py-4">
-            <div className="text-center space-y-4">
-              <h4 className="text-[10px] font-display font-black uppercase tracking-[0.3em] text-primary">Síguenos</h4>
-              <div className="flex justify-center gap-8">
+            <div className="space-y-4">
+              <h4 className="text-[10px] font-display font-black uppercase tracking-[0.3em] text-primary">SÍGUENOS</h4>
+              <div className="flex justify-center md:justify-start gap-8">
                 <a href="#" className="text-foreground/60 hover:text-primary transition-all hover:scale-110">
                   <Instagram className="w-6 h-6" />
                 </a>
@@ -49,27 +48,27 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Enlaces de Navegación */}
-          <div className="md:col-span-4 grid grid-cols-2 gap-8 text-center md:text-left">
-            <div className="space-y-6">
-              <h4 className="text-[10px] font-display font-black uppercase tracking-[0.3em] text-primary">Mutea</h4>
-              <ul className="space-y-4">
-                <li><Link href="/" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Inicio</Link></li>
-                <li><Link href="/#beneficios" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Beneficios</Link></li>
-                <li><Link href="/#casos" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Casos de uso</Link></li>
-                <li><Link href="/#comprar" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Comprar</Link></li>
-              </ul>
-            </div>
-            <div className="space-y-6">
-              <h4 className="text-[10px] font-display font-black uppercase tracking-[0.3em] text-primary">Ayuda</h4>
-              <ul className="space-y-4">
-                <li><Link href="#" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Preguntas frecuentes</Link></li>
-                <li><Link href="mailto:hola@mutea.cl" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Contacto</Link></li>
-                <li><Link href="/terminos" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Términos y condiciones</Link></li>
-                <li><Link href="/privacidad" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Política de privacidad</Link></li>
-                <li><Link href="/garantia" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Cambios y garantía</Link></li>
-              </ul>
-            </div>
+          {/* Columna 2: MUTEA Enlaces */}
+          <div className="space-y-6 text-center md:text-left">
+            <h4 className="text-[10px] font-display font-black uppercase tracking-[0.3em] text-primary">Mutea</h4>
+            <ul className="space-y-4">
+              <li><Link href="/" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Inicio</Link></li>
+              <li><Link href="/#beneficios" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Beneficios</Link></li>
+              <li><Link href="/#casos" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Casos de uso</Link></li>
+              <li><Link href="/#comprar" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Comprar</Link></li>
+            </ul>
+          </div>
+
+          {/* Columna 3: AYUDA Enlaces */}
+          <div className="space-y-6 text-center md:text-left">
+            <h4 className="text-[10px] font-display font-black uppercase tracking-[0.3em] text-primary">Ayuda</h4>
+            <ul className="space-y-4">
+              <li><Link href="#" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Preguntas frecuentes</Link></li>
+              <li><Link href="mailto:hola@mutea.cl" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Contacto</Link></li>
+              <li><Link href="/terminos" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Términos y condiciones</Link></li>
+              <li><Link href="/privacidad" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Política de privacidad</Link></li>
+              <li><Link href="/garantia" className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/60 hover:text-primary transition-colors">Cambios y garantía</Link></li>
+            </ul>
           </div>
         </div>
 
