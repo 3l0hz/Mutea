@@ -87,7 +87,7 @@ export function ProductOffer() {
 
             <div className="space-y-6 md:space-y-8">
               <div>
-                <p className="text-[9px] md:text-[10px] font-display font-black uppercase tracking-widest text-foreground/40 mb-3 md:mb-4 text-center md:text-left">Color del Case</p>
+                <p className="text-[9px] md:text-[10px] font-display font-black uppercase tracking-widest text-foreground/40 mb-3 md:mb-4 text-center md:text-left">Color</p>
                 <div className="flex gap-3 md:gap-4">
                   {(['Blanco', 'Negro'] as const).map(v => (
                     <button
