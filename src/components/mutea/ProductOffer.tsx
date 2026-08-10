@@ -129,7 +129,7 @@ export function ProductOffer() {
               initialUpsell={includeUpsell}
               trigger={
                 <Button className="w-full h-20 md:h-24 bg-foreground hover:bg-foreground/90 text-background rounded-none text-lg md:text-xl font-display font-black uppercase tracking-[0.2em] md:tracking-[0.3em] shadow-xl shadow-foreground/20">
-                  Reservar ahora
+                  Comprar
                 </Button>
               }
             />
