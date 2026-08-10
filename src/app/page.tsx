@@ -2,7 +2,6 @@ import { Header } from '@/components/mutea/Header';
 import { Hero } from '@/components/mutea/Hero';
 import { InfoSection } from '@/components/mutea/InfoSection';
 import { TechSpecs } from '@/components/mutea/TechSpecs';
-import { Benefits } from '@/components/mutea/Benefits';
 import { UseCases } from '@/components/mutea/UseCases';
 import { ProductOffer } from '@/components/mutea/ProductOffer';
 import { Usage } from '@/components/mutea/Usage';
@@ -23,7 +22,6 @@ export default function Home() {
       />
       <InfoSection />
       <TechSpecs />
-      <Benefits />
       <UseCases />
       <Usage />
       <ProductOffer />
