@@ -58,15 +58,17 @@ export function TechSpecs() {
   ];
 
   return (
-    <section className="py-16 md:py-32 px-4 md:px-6 bg-slate-50/50 overflow-hidden">
+    <section className="py-12 md:py-32 px-4 md:px-6 bg-slate-50/50 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-8 md:mb-20 space-y-3 md:space-y-4 text-center md:text-left animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <h2 className="text-2xl md:text-5xl font-display font-black uppercase tracking-tight">
+        {/* Título más compacto en mobile */}
+        <div className="mb-6 md:mb-20 space-y-2 md:space-y-4 text-center md:text-left animate-in fade-in slide-in-from-bottom-4 duration-700">
+          <h2 className="text-xl md:text-5xl font-display font-black uppercase tracking-tight">
             Ficha <span className="text-primary">Técnica</span>
           </h2>
-          <div className="h-1 w-16 md:w-20 bg-primary mx-auto md:mx-0" />
+          <div className="h-1 w-12 md:w-20 bg-primary mx-auto md:mx-0" />
         </div>
 
+        {/* Grid de 2 columnas en mobile y 3 en desktop */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
           {specs.map((spec, idx) => (
             <div 
@@ -75,15 +77,15 @@ export function TechSpecs() {
                 "p-4 md:p-10 border border-slate-200 bg-white rounded-[1.2rem] md:rounded-[2rem] hover:shadow-xl hover:-translate-y-1 transition-all group",
                 "animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-both"
               )}
-              style={{ animationDelay: `${idx * 100}ms` }}
+              style={{ animationDelay: `${idx * 80}ms` }}
             >
               {/* Icono adaptable */}
-              <div className="w-8 h-8 md:w-12 md:h-12 bg-slate-100 rounded-lg md:rounded-2xl flex items-center justify-center mb-4 md:mb-8 group-hover:bg-primary transition-colors">
+              <div className="w-8 h-8 md:w-12 md:h-12 bg-slate-100 rounded-lg md:rounded-2xl flex items-center justify-center mb-3 md:mb-8 group-hover:bg-primary transition-colors">
                 <spec.icon className="w-4 h-4 md:w-6 md:h-6 text-foreground/40 group-hover:text-white transition-colors" />
               </div>
               
-              <div className="space-y-1 md:space-y-2 mb-2 md:mb-4">
-                {/* Título: Versión Desktop y Mobile */}
+              <div className="space-y-0.5 md:space-y-2 mb-1 md:mb-4">
+                {/* Etiquetas Mobile-First */}
                 <span className="hidden md:block text-[10px] font-display font-black text-primary uppercase tracking-[0.2em]">
                   {spec.title}
                 </span>
@@ -91,7 +93,7 @@ export function TechSpecs() {
                   {spec.mobileTitle}
                 </span>
 
-                {/* Valor/Subtítulo: Versión Desktop y Mobile */}
+                {/* Valores Mobile-First */}
                 <h3 className="hidden md:block text-xl font-display font-black uppercase tracking-tight">
                   {spec.value}
                 </h3>
@@ -100,7 +102,7 @@ export function TechSpecs() {
                 </h3>
               </div>
 
-              {/* Descripción: Solo visible en Desktop */}
+              {/* Descripción solo en Desktop para ahorrar espacio vertical */}
               <p className="hidden md:block text-sm text-foreground/50 leading-relaxed font-medium">
                 {spec.description}
               </p>
