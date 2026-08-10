@@ -12,7 +12,7 @@ import { ReservationModal } from './ReservationModal';
 const GALLERIES = {
   'Blanco': [
     "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20white/atras%20costado%20white.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSB3aGl0ZS9hdHJhcyBjb3N0YWRvIHdoaXRlLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODU0MzYzNDksImV4cCI6MTgxNjk3MjM0OX0.WfsKLMEvQnBdyOp5KB1H6kvWoteivzCChcABsy5NwYU",
-    "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20white/frente%20costado%20white.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSB3aGl0ZS9mcmVudGUgY29zdGFkbyB3aGl0ZS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg1NDM2MzY2LCJleHAiOjE4MTY5NzIzNjZ9.SRJS-W21OinRPEOZ-c8i8jPg-QvcxrEupRKGq7sUg2c",
+    "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20white/mFrente%20costado%20white.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSB3aGl0ZS9mcmVudGUgY29zdGFkbyB3aGl0ZS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg1NDM2MzY2LCJleHAiOjE4MTY5NzIzNjZ9.SRJS-W21OinRPEOZ-c8i8jPg-QvcxrEupRKGq7sUg2c",
     "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20white/Frente%20white%20(2).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSB3aGl0ZS9GcmVudGUgd2hpdGUgKDIpLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODU0MzYzODQsImV4cCI6MTgxNjk3MjM4NH0.kEPbkSViLgZymmQ0PVb6r2ES3zCftdQq788wwYC1BPo",
     "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20white/atras%20white.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSB3aGl0ZS9hdHJhcyB3aGl0ZS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg1NDM3MDY0LCJleHAiOjE4MTY5NzMwNjR9.Hi1OfLB7LvgqUZY81vrrXbRz8ReVJAzx0xq7JANdVis"
   ],
@@ -116,7 +116,7 @@ export function ProductOffer() {
                     {includeUpsell && <Check className="w-3 h-3 md:w-4 md:h-4 text-white" />}
                   </div>
                   <div>
-                    <p className="font-display font-black uppercase text-[9px] md:text-[10px] tracking-widest">+ Pack Energía</p>
+                    <p className="font-display font-black uppercase text-[9px] md:text-[10px] tracking-widest">+ BATERÍA EXTERNA</p>
                     <p className="text-[10px] md:text-xs text-foreground/50 font-medium line-clamp-1">Batería 20k mAh + Cable premium</p>
                   </div>
                 </div>

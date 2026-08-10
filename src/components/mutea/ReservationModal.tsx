@@ -82,7 +82,7 @@ export function ReservationModal({
 📍 Región y Comuna: ${values.city}
 🏠 Dirección: ${values.address}
 🎨 Color: ${values.variant}
-⚡ Pack Energía: ${packText}
+⚡ Batería Externa: ${packText}
 📝 Comentario: ${commentText}`;
     
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullText)}`, '_blank');
@@ -206,7 +206,7 @@ export function ReservationModal({
                     </FormControl>
                     <div className="space-y-1 leading-none">
                       <Label htmlFor="modal-upsell" className="text-[10px] font-display font-black uppercase tracking-widest cursor-pointer">
-                        Incluir Pack Energía (+ $10.000)
+                        Incluir Batería Externa (+ $10.000)
                       </Label>
                     </div>
                   </FormItem>
