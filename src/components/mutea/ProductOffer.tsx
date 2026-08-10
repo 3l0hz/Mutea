@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from 'react';
@@ -35,7 +36,7 @@ export function ProductOffer() {
   const currentGallery = GALLERIES[variant];
 
   return (
-    <section className="py-16 md:py-32 px-4 md:px-6 bg-white">
+    <section id="comprar" className="py-16 md:py-32 px-4 md:px-6 bg-white">
       <div className="max-w-6xl mx-auto border border-slate-200 rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200/50">
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Lado izquierdo con Galería Dinámica */}
