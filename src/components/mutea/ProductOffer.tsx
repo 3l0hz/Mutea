@@ -14,12 +14,12 @@ const GALLERIES = {
     "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20white/atras%20costado%20white.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSB3aGl0ZS9hdHJhcyBjb3N0YWRvIHdoaXRlLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODU0MzYzNDksImV4cCI6MTgxNjk3MjM0OX0.WfsKLMEvQnBdyOp5KB1H6kvWoteivzCChcABsy5NwYU",
     "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20white/atras%20white.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSB3aGl0ZS9hdHJhcyB3aGl0ZS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg2NjU2NjkwLCJleHAiOjE4MTgxOTI2OTB9.tBe7oQBwS9QKQyte2sU3AEAim9as52gupyFRNdO58yo",
     "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20white/Frente%20white%20(2).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSB3aGl0ZS9GcmVudGUgd2hpdGUgKDIpLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODU0MzYzODQsImV4cCI6MTgxNjk3MjM4NH0.kEPbkSViLgZymmQ0PVb6r2ES3zCftdQq788wwYC1BPo",
-    "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20white/atras%20white.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSB3aGl0ZS9hdHJhcyB3aGl0ZS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg1NDM3MDY0LCJleHAiOjE4MTY5NzMwODN9.a4UGP0d9si6EKLHK8nz_B4NmJ-dcqcIT12dES4Oy3o8"
+    "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20white/frente%20costado%20white.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSB3aGl0ZS9mcmVudGUgY29zdGFkbyB3aGl0ZS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg2NjU3OTYzLCJleHAiOjE4MTgxOTM5NjN9.EsJnmMK-qdEnZ2gd--o6VVmg8TLx-VxgDPKfO0HSdcw"
   ],
   'Negro': [
     "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20black/Costado%20atras.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSBibGFjay9Db3N0YWRvIGF0cmFzLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODU0MzY0MTMsImV4cCI6MTgxNjk3MjQxM30.lreJtTnoy26UMFj2MrgO39GGNqjtM4DTNczpdNXE4q0",
     "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20black/Costado%20adelante.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSBibGFjay9Db3N0YWRvIGFkZWxhbnRlLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODU0MzY0MjEsImV4cCI6MTgxNjk3MjQyMX0.PhjyXcNIGnpBt2DYo_EcWt_RYTwuup0OVltElYLnlho",
-    "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20black/frente.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSBibGFjay9mcmVudGUucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NTQzNzE4OSwiZXhwIjoxODE2OTczMTg5fQ.QI9IsRLABdorR0lfhOWkf9kyiCzbBx9fo4kXP0YcCXQ",
+    "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20black/munequera%20adelante.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSBibGFjay9tdW5lcXVlcmEgYWRlbGFudGUucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4NjY1NzQ4NCwiZXhwIjoxODE4MTkzNDg0fQ.zFvF_vY90t8y-qYI02Vd6uO1W9S6_lXGv17f-pY6mS0",
     "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20black/atras.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSBibGFjay9hdHJhcy5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg1NDM3MDgzLCJleHAiOjE4MTY5NzMwODN9.a4UGP0d9si6EKLHK8nz_B4NmJ-dcqcIT12dES4Oy3o8"
   ]
 };
@@ -87,7 +87,7 @@ export function ProductOffer() {
 
             <div className="space-y-6 md:space-y-8">
               <div>
-                <p className="text-[9px] md:text-[10px] font-display font-black uppercase tracking-widest text-foreground/40 mb-3 md:mb-4 text-center md:text-left">Color</p>
+                <p className="text-[9px] md:text-[10px] font-display font-black uppercase tracking-widest text-foreground/40 mb-3 md:mb-4 text-center md:text-left">COLOR</p>
                 <div className="flex gap-3 md:gap-4">
                   {(['Blanco', 'Negro'] as const).map(v => (
                     <button
@@ -129,7 +129,7 @@ export function ProductOffer() {
               initialUpsell={includeUpsell}
               trigger={
                 <Button className="w-full h-20 md:h-24 bg-foreground hover:bg-foreground/90 text-background rounded-none text-lg md:text-xl font-display font-black uppercase tracking-[0.2em] md:tracking-[0.3em] shadow-xl shadow-foreground/20">
-                  Comprar
+                  COMPRAR
                 </Button>
               }
             />
