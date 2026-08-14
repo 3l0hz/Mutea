@@ -13,7 +13,7 @@ export function Hero() {
   const productImageUrl = "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea/signal-2026-07-29-13-00-30-661_004.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYS9zaWduYWwtMjAyNi0wNy0yOS0xMy0wMC0zMC02NjFfMDA0LnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODUzNjQxNDEsImV4cCI6MTgxNjkwMDE0MX0.nPOhL26lQWxP8V65zGA0_yUb5zAREV87_cYypFl4dqY";
 
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen flex items-center pt-24 md:pt-40 overflow-hidden bg-white">
+    <section className="relative min-h-[90vh] md:min-h-screen flex items-center pt-32 pb-24 md:pt-44 md:pb-40 overflow-x-hidden bg-white">
       {/* Background Image with Light Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -39,7 +39,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center relative z-10">
         <div className="space-y-6 md:space-y-8 text-center md:text-left order-1 md:order-1">
           <div className="inline-block px-3 py-1 bg-primary/10 rounded-full animate-in fade-in slide-in-from-bottom-2 duration-500 fill-mode-both">
             <span className="text-[9px] md:text-[10px] font-display font-black tracking-widest text-primary uppercase">Tecnología de Silencio</span>
@@ -67,7 +67,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative flex items-center justify-center order-2 md:order-2 mt-4 md:mt-0 animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 fill-mode-both group">
+        <div className="relative flex items-center justify-center order-2 md:order-2 mt-8 md:mt-0 animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 fill-mode-both group">
           <div className="absolute w-[90%] h-[90%] bg-primary/10 rounded-full blur-[80px] md:blur-[120px] animate-pulse" />
           <div className="relative z-10 max-w-[280px] xs:max-w-[320px] md:max-w-lg w-full animate-float">
             <div className="relative animate-pulse-glow-subtle">
