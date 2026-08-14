@@ -52,7 +52,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <ReservationModal 
               trigger={
-                <Button className="bg-foreground hover:bg-foreground/90 text-background rounded-none h-14 md:h-16 px-10 md:px-12 text-sm font-display font-bold tracking-[0.2em] uppercase w-full sm:w-auto">
+                <Button variant="mutea" size="xl" className="w-full sm:w-auto">
                   Comprar ahora
                 </Button>
               }

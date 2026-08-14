@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -103,7 +102,9 @@ export function ContactForm() {
 
               <Button 
                 type="submit" 
-                className="w-full h-20 bg-[#25D366] hover:bg-[#25D366]/90 text-white rounded-none text-lg font-display font-black uppercase tracking-[0.2em] shadow-lg shadow-[#25D366]/20 transition-all flex items-center justify-center gap-3"
+                variant="mutea"
+                size="xl"
+                className="w-full flex items-center justify-center gap-3"
               >
                 Continuar a WhatsApp
                 <MessageCircle className="w-6 h-6 fill-current" />

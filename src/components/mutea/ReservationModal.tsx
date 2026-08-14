@@ -306,7 +306,8 @@ export function ReservationModal({
 
             <Button
               type="submit"
-              className="w-full h-16 bg-[#25D366] hover:bg-[#25D366]/90 text-white rounded-none font-display font-black uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-3 shadow-lg shadow-[#25D366]/20"
+              variant="mutea"
+              className="w-full h-16 transition-all flex items-center justify-center gap-3"
             >
               Confirmar por WhatsApp
               <MessageCircle className="w-5 h-5 fill-current" />

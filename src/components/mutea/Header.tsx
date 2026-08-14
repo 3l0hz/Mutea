@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -46,7 +45,7 @@ export function Header() {
           
           <ReservationModal 
             trigger={
-              <Button variant="default" className="bg-foreground text-background hover:bg-foreground/90 rounded-none px-6 md:px-8 h-12 md:h-14 font-display font-bold tracking-widest uppercase text-[10px] md:text-[11px]">
+              <Button variant="mutea" className="px-6 md:px-8 h-12 md:h-13 text-[10px] md:text-[11px]">
                 Comprar
               </Button>
             }
