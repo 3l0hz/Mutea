@@ -12,7 +12,7 @@ export function Usage() {
         </h2>
         <div className="h-1 w-20 bg-foreground mx-auto" />
         <p className="text-2xl md:text-3xl font-medium text-foreground/60 leading-relaxed max-w-2xl mx-auto">
-          Conéctalo a un powerbank. Activa el switch. <br />
+          Conéctalo a una batería externa. Activa el switch. <br />
           Recupera el <span className="text-foreground font-black italic">silencio</span> al instante.
         </p>
       </div>
