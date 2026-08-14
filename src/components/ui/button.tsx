@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-md",
-        mutea: "bg-foreground text-background font-display font-bold uppercase tracking-[0.2em] clip-cut-br hover:bg-foreground hover:brightness-125 hover:drop-shadow-[0_0_10px_rgba(41,184,255,0.6)] duration-300",
+        mutea: "bg-foreground text-background font-display font-bold uppercase tracking-[0.2em] clip-cut-br hover:bg-foreground hover:shadow-[0_0_20px_rgba(41,184,255,0.3)] hover:ring-1 hover:ring-primary/30 transition-all duration-300 [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:translate-x-1.5",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-md",
         outline:

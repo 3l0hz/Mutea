@@ -45,6 +45,32 @@
   }
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulse-glow-subtle {
+  0%, 100% { filter: drop-shadow(0 0 15px rgba(41, 184, 255, 0.2)); }
+  50% { filter: drop-shadow(0 0 30px rgba(41, 184, 255, 0.4)); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-pulse-glow-subtle {
+  animation: pulse-glow-subtle 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float, .animate-pulse-glow-subtle, .animate-in {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
 .font-sans {
   font-family: var(--font-inter), ui-sans-serif, system-ui;
 }
