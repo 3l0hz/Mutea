@@ -1,10 +1,11 @@
+
 import { Header } from '@/components/mutea/Header';
 import { Hero } from '@/components/mutea/Hero';
+import { HowItWorks } from '@/components/mutea/HowItWorks';
 import { InfoSection } from '@/components/mutea/InfoSection';
 import { TechSpecs } from '@/components/mutea/TechSpecs';
 import { UseCases } from '@/components/mutea/UseCases';
 import { ProductOffer } from '@/components/mutea/ProductOffer';
-import { Usage } from '@/components/mutea/Usage';
 import { Footer } from '@/components/mutea/Footer';
 import { WhatsAppButton } from '@/components/mutea/WhatsAppButton';
 import { MuteaVideoSection } from '@/components/mutea/MuteaVideoSection';
@@ -16,6 +17,7 @@ export default function Home() {
     <main className="min-h-screen bg-background selection:bg-primary/30">
       <Header />
       <Hero />
+      <HowItWorks />
       <MuteaVideoSection 
         videoUrl={VIDEO_URL} 
         startTime={0} 
@@ -23,7 +25,6 @@ export default function Home() {
       <InfoSection />
       <TechSpecs />
       <UseCases />
-      <Usage />
       <ProductOffer />
       <Footer />
       <WhatsAppButton />
