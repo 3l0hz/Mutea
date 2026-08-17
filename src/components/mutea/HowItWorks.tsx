@@ -7,10 +7,10 @@ import { Smartphone, Power, CheckCircle2, ChevronDown, Zap } from 'lucide-react'
 
 const PRODUCT_IMAGE_URL = "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea/signal-2026-07-29-13-00-30-661_004.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYS9zaWduYWwtMjAyNi0wNy0yOS0xMy0wMC0zMC02NjFfMDA0LnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODUzNjQxNDEsImV4cCI6MTgxNjkwMDE0MX0.nPOhL26lQWxP8V65zGA0_yUb5zAREV87_cYypFl4dqY";
 
-// Imágenes de referencia para miniaturas (basadas en los assets existentes)
-const THUMB_USB = "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20black/atras.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYSBibGFjay9hdHJhcy5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg1NDM3MDgzLCJleHAiOjE4MTY5NzMwODN9.a4UGP0d9si6EKLHK8nz_B4NmJ-dcqcIT12dES4Oy3o8";
-const THUMB_SWITCH = "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/HeroSection/mutea%20black/Costado%20adelante.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIZXJvU2VjdGlvbi9tdXRlYS BibGFjay9Db3N0YWRvIGFkZWxhbnRlLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODU0MzY0MjEsImV4cCI6MTgxNjk3MjQyMX0.PhjyXcNIGnpBt2DYo_EcWt_RYTwuup0OVltElYLnlho";
-const THUMB_READY = PRODUCT_IMAGE_URL;
+// Nuevas imágenes de referencia para miniaturas de los pasos
+const THUMB_USB = "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/Activa!/ChatGPT%20Image%2017%20ago%202026,%2002_14_37%20p.m.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJBY3RpdmEhL0NoYXRHUFQgSW1hZ2UgMTcgYWdvIDIwMjYsIDAyXzE0XzM3IHAubS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg2OTk0NDA5LCJleHAiOjE4MTg1MzA0MDl9.3yUkwT_mG36j7E2dS58SXNxdXKSCaBGkGCrgasQ0_EI&utm_source=chatgpt.com";
+const THUMB_SWITCH = "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/Activa!/00afe846-562e-48d2-8499-e1695306d2b3.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJBY3RpdmEhLzAwYWZlODQ2LTU2MmUtNDhkMi04NDk5LWUxNjk1MzA2ZDJiMy5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg2OTk0NDM2LCJleHAiOjE4MTg1MzA0MzZ9.1dJQ6ZkpNO0ZpnpfoK325udbBM9qQA8CU1zZwH1shfo&utm_source=chatgpt.com";
+const THUMB_READY = "https://exntfmqdonkpbzrlsbww.supabase.co/storage/v1/object/sign/Activa!/ChatGPT%20Image%2017%20ago%202026,%2003_16_46%20p.m.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yYTY4MzQ3Ni1lYjFiLTQ0YjUtYmNmZC0zZGZkODM3ZmFmMjAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJBY3RpdmEhL0NoYXRHUFQgSW1hZ2UgMTcgYWdvIDIwMjYsIDAzXzE2XzQ2IHAubS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg2OTk0NDQ3LCJleHAiOjE4MTg1MzA0NDd9.Pb-b-QcF81cbiLlN937jvn101AzN3euSVkuuKD6d4KI&utm_source=chatgpt.com";
 
 interface Step {
   id: number;
@@ -155,7 +155,6 @@ export function HowItWorks() {
                 {STEPS.map((step, idx) => {
                   const Icon = step.icon;
                   const isActive = activeStep === step.id;
-                  const isCompleted = activeStep > step.id;
 
                   return (
                     <div 
@@ -206,7 +205,7 @@ export function HowItWorks() {
                             src={step.thumb}
                             alt={step.title}
                             fill
-                            className="object-cover"
+                            className="object-contain"
                             unoptimized
                           />
                         </div>
