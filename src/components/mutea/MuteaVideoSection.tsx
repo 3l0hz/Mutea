@@ -103,12 +103,12 @@ export function MuteaVideoSection({
             <video
               ref={videoRef}
               className="w-full h-full object-cover"
-              controls={isPlaying}
+              controls
               preload="metadata"
               playsInline
+              src={videoUrl}
               poster={posterUrl}
             >
-              <source src={videoUrl} type="video/mp4" />
               Tu navegador no soporta la reproducción de videos.
             </video>
 
