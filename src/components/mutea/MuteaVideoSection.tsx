@@ -11,6 +11,7 @@ interface MuteaVideoSectionProps {
   label?: string;
   title?: React.ReactNode;
   description?: string;
+  isVertical?: boolean;
 }
 
 export function MuteaVideoSection({ 
@@ -19,7 +20,8 @@ export function MuteaVideoSection({
   startTime = 0,
   label = "MUTEA EN ACCIÓN",
   title,
-  description = "Conoce Mutea y descubre una nueva forma de recuperar tu tranquilidad en cualquier entorno."
+  description = "Conoce Mutea y descubre una nueva forma de recuperar tu tranquilidad en cualquier entorno.",
+  isVertical = false
 }: MuteaVideoSectionProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -75,27 +77,36 @@ export function MuteaVideoSection({
           <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tight leading-none">
             {finalTitle}
           </h2>
-          <p className="text-base md:text-xl text-foreground/50 max-w-2xl mx-auto font-medium px-4">
-            {description}
-          </p>
+          {description && (
+            <p className="text-base md:text-xl text-foreground/50 max-w-2xl mx-auto font-medium px-4">
+              {description}
+            </p>
+          )}
         </div>
 
         {/* Contenedor del Video Premium */}
         <div 
-          className="w-full max-w-[1280px] relative group animate-in fade-in zoom-in-95 duration-1000 delay-200 fill-mode-both"
+          className={cn(
+            "w-full relative group animate-in fade-in zoom-in-95 duration-1000 delay-200 fill-mode-both flex justify-center",
+            isVertical ? "max-w-[450px]" : "max-w-[1280px]"
+          )}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Sombra tecnológica */}
           <div className="absolute -inset-1 bg-gradient-to-r from-primary/10 to-transparent rounded-[16px] md:rounded-[26px] blur-sm opacity-20 transition duration-1000"></div>
           
-          <div className="relative aspect-video w-full bg-slate-900 rounded-[14px] md:rounded-[28px] overflow-hidden shadow-2xl shadow-slate-200/40 border border-slate-100">
+          <div className={cn(
+            "relative w-full bg-slate-900 rounded-[14px] md:rounded-[28px] overflow-hidden shadow-2xl shadow-slate-200/40 border border-slate-100",
+            isVertical ? "aspect-[9/16]" : "aspect-video"
+          )}>
             <video
               ref={videoRef}
               className="w-full h-full object-cover"
               controls={isPlaying}
               preload="metadata"
               playsInline
+              poster={posterUrl}
             >
               <source src={videoUrl} type="video/mp4" />
               Tu navegador no soporta la reproducción de videos.
@@ -118,7 +129,7 @@ export function MuteaVideoSection({
                   )}
                   aria-label="Reproducir video"
                 >
-                  <Play className="w-6 h-6 md:w-10 md:h-10 fill-current ml-1" />
+                  <Play className={cn(isVertical ? "w-8 h-8 md:w-12 md:h-12" : "w-6 h-6 md:w-10 md:h-10", "fill-current ml-1")} />
                 </button>
               </div>
             )}
