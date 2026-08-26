@@ -4,7 +4,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Check } from 'lucide-react';
+import { Zap } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ReservationModal } from './ReservationModal';
 
@@ -26,7 +26,6 @@ const GALLERIES = {
 export function ProductOffer() {
   const [variant, setVariant] = useState<'Blanco' | 'Negro'>('Blanco');
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const [includeUpsell, setIncludeUpsell] = useState(false);
 
   useEffect(() => {
     setActiveImageIndex(0);
@@ -103,29 +102,20 @@ export function ProductOffer() {
                 </div>
               </div>
 
-              <div 
-                onClick={() => setIncludeUpsell(!includeUpsell)}
-                className={cn(
-                  "p-4 md:p-6 border-2 cursor-pointer transition-all flex items-center justify-between group rounded-none",
-                  includeUpsell ? "border-primary bg-primary/5" : "border-slate-100 hover:border-slate-200"
-                )}
-              >
-                <div className="flex items-center gap-3 md:gap-4">
-                  <div className={cn("w-5 h-5 md:w-6 md:h-6 rounded-full border-2 flex items-center justify-center transition-all", includeUpsell ? "bg-primary border-primary" : "border-slate-200 group-hover:border-slate-300")}>
-                    {includeUpsell && <Check className="w-3 h-3 md:w-4 md:h-4 text-white" />}
-                  </div>
-                  <div>
-                    <p className="font-display font-black uppercase text-[9px] md:text-[10px] tracking-widest">+ BATERÍA EXTERNA</p>
-                    <p className="text-[10px] md:text-xs text-foreground/50 font-medium line-clamp-1">Batería 20k mAh + Cable premium</p>
-                  </div>
+              {/* Info section for included battery */}
+              <div className="p-4 md:p-6 border border-slate-100 bg-slate-50/50 flex items-center gap-4 rounded-none">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary flex-shrink-0">
+                  <Zap className="w-5 h-5 md:w-6 md:h-6 fill-current" />
                 </div>
-                <span className="font-display font-black text-primary text-sm md:text-base">+$10.000</span>
+                <div>
+                  <p className="font-display font-black uppercase text-[10px] md:text-[11px] tracking-widest text-primary">INCLUYE BATERÍA EXTERNA</p>
+                  <p className="text-[10px] md:text-xs text-foreground/50 font-medium">Batería externa 20.000 mAh + cable incluidos</p>
+                </div>
               </div>
             </div>
 
             <ReservationModal 
               initialVariant={variant}
-              initialUpsell={includeUpsell}
               trigger={
                 <Button variant="mutea" size="xl" className="w-full">
                   COMPRAR

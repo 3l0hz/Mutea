@@ -22,7 +22,6 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/checkbox';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { MessageCircle } from 'lucide-react';
@@ -33,20 +32,17 @@ const formSchema = z.object({
   city: z.string().min(2, "La región y comuna son obligatorias"),
   address: z.string().min(5, "La dirección de envío es obligatoria"),
   variant: z.enum(["Blanco", "Negro"]),
-  includeUpsell: z.boolean(),
   message: z.string().optional(),
 });
 
 interface ReservationModalProps {
   trigger?: React.ReactNode;
   initialVariant?: "Blanco" | "Negro";
-  initialUpsell?: boolean;
 }
 
 export function ReservationModal({ 
   trigger, 
-  initialVariant = "Blanco", 
-  initialUpsell = false 
+  initialVariant = "Blanco"
 }: ReservationModalProps) {
   const [open, setOpen] = React.useState(false);
 
@@ -58,7 +54,6 @@ export function ReservationModal({
       city: "",
       address: "",
       variant: initialVariant,
-      includeUpsell: initialUpsell,
       message: "",
     },
   });
@@ -66,13 +61,11 @@ export function ReservationModal({
   React.useEffect(() => {
     if (open) {
       form.setValue('variant', initialVariant);
-      form.setValue('includeUpsell', initialUpsell);
     }
-  }, [open, initialVariant, initialUpsell, form]);
+  }, [open, initialVariant, form]);
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     const phoneNumber = "56940628182";
-    const packText = values.includeUpsell ? "Sí" : "No";
     const commentText = values.message ? values.message : "Ninguno";
 
     const fullText = `Hola! Me gustaría confirmar mi pedido de MUTEA:
@@ -81,7 +74,7 @@ export function ReservationModal({
 📍 Región y Comuna: ${values.city}
 🏠 Dirección: ${values.address}
 🎨 Color: ${values.variant}
-⚡ Batería Externa: ${packText}
+⚡ Batería Externa: Incluida (20.000 mAh + cable)
 📝 Comentario: ${commentText}`;
 
     // Registrar la reserva como contacto en Meta Pixel
@@ -251,32 +244,11 @@ export function ReservationModal({
                 )}
               />
 
-              <FormField
-                control={form.control}
-                name="includeUpsell"
-                render={({ field }) => (
-                  <FormItem className="flex flex-row items-center space-x-3 space-y-0 p-4 border border-slate-100 bg-slate-50/50 rounded-xl">
-
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                        id="modal-upsell"
-                      />
-                    </FormControl>
-
-                    <div className="space-y-1 leading-none">
-                      <Label
-                        htmlFor="modal-upsell"
-                        className="text-[10px] font-display font-black uppercase tracking-widest cursor-pointer"
-                      >
-                        Incluir Batería Externa (+ $10.000)
-                      </Label>
-                    </div>
-
-                  </FormItem>
-                )}
-              />
+              <div className="p-4 border border-slate-100 bg-slate-50 rounded-xl">
+                <p className="text-[10px] font-display font-black uppercase tracking-widest text-primary">
+                  INCLUYE BATERÍA EXTERNA (20.000 mAh)
+                </p>
+              </div>
 
             </div>
 
