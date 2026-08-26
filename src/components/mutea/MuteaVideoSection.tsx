@@ -8,17 +8,27 @@ interface MuteaVideoSectionProps {
   videoUrl: string;
   posterUrl?: string;
   startTime?: number;
+  label?: string;
+  title?: React.ReactNode;
+  description?: string;
 }
 
 export function MuteaVideoSection({ 
   videoUrl, 
   posterUrl, 
-  startTime = 0 
+  startTime = 0,
+  label = "MUTEA EN ACCIÓN",
+  title,
+  description = "Conoce Mutea y descubre una nueva forma de recuperar tu tranquilidad en cualquier entorno."
 }: MuteaVideoSectionProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+
+  const finalTitle = title || (
+    <>EL SILENCIO, <br className="md:hidden" /><span className="text-primary">EN TUS MANOS.</span></>
+  );
 
   const handleTogglePlay = () => {
     if (!videoRef.current) return;
@@ -59,14 +69,14 @@ export function MuteaVideoSection({
         <div className="text-center space-y-4 md:space-y-6 mb-10 md:mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-both">
           <div className="inline-block">
             <span className="text-[9px] md:text-[10px] font-display font-black tracking-[0.3em] text-primary uppercase bg-primary/5 px-4 py-1 rounded-full">
-              MUTEA EN ACCIÓN
+              {label}
             </span>
           </div>
           <h2 className="text-3xl md:text-6xl font-display font-black uppercase tracking-tight leading-none">
-            EL SILENCIO, <br className="md:hidden" /><span className="text-primary">EN TUS MANOS.</span>
+            {finalTitle}
           </h2>
           <p className="text-base md:text-xl text-foreground/50 max-w-2xl mx-auto font-medium px-4">
-            Conoce Mutea y descubre una nueva forma de recuperar tu tranquilidad en cualquier entorno.
+            {description}
           </p>
         </div>
 
