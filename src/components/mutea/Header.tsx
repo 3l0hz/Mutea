@@ -46,7 +46,7 @@ export function Header() {
           <ReservationModal 
             trigger={
               <Button variant="mutea" className="px-6 md:px-8 h-12 md:h-13 text-[10px] md:text-[11px]">
-                Comprar
+                Reservar
               </Button>
             }
           />

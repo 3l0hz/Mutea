@@ -77,9 +77,11 @@ export function ProductOffer() {
             <div className="text-center md:text-left">
               <span className="text-primary font-display font-black tracking-[0.3em] uppercase text-[9px] md:text-[10px]">Edición Limitada</span>
               <h2 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tight mt-2">MUTEA</h2>
+              <p className="text-[10px] font-display font-bold uppercase tracking-widest text-foreground/40 mt-1">Las unidades se preparan según disponibilidad de componentes.</p>
+              
               <div className="flex items-baseline justify-center md:justify-start gap-4 mt-6 md:mt-8">
                 <span className="text-5xl md:text-6xl font-display font-black tracking-tighter">$79.990</span>
-                <span className="text-foreground font-display font-bold uppercase text-[8px] md:text-[9px] px-3 py-1 bg-slate-100 rounded-full">Oferta</span>
+                <span className="text-foreground font-display font-bold uppercase text-[8px] md:text-[9px] px-3 py-1 bg-slate-100 rounded-full">Precio Reserva</span>
               </div>
             </div>
 
@@ -118,7 +120,7 @@ export function ProductOffer() {
               initialVariant={variant}
               trigger={
                 <Button variant="mutea" size="xl" className="w-full">
-                  COMPRAR
+                  RESERVAR MI UNIDAD
                 </Button>
               }
             />

@@ -56,14 +56,17 @@ export function Hero() {
             Recupera tu tranquilidad cuando otros no respetan. Sin complicaciones, solo paz.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[700ms] fill-mode-both">
+          <div className="flex flex-col gap-4 items-center md:items-start animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[700ms] fill-mode-both">
             <ReservationModal 
               trigger={
                 <Button variant="mutea" size="xl" className="w-full sm:w-auto group">
-                  Comprar ahora
+                  Reservar unidad
                 </Button>
               }
             />
+            <p className="text-[9px] md:text-[10px] font-display font-bold uppercase tracking-[0.2em] text-foreground/40">
+              UNIDADES LIMITADAS · DISPONIBILIDAD SEGÚN COMPONENTES
+            </p>
           </div>
         </div>
 
